@@ -2,7 +2,7 @@ import json
 import urllib.request, urllib.error
 
 url = input("Enter URL: ")
-x = urllib.request.urlopen(url).read()
+hnd = urllib.request.urlopen(url).read()
 
 print('Retrieving', url)
 uh = urllib.request.urlopen(url)  # this opens the user's url
@@ -12,7 +12,7 @@ print('Retrieved', len(data), 'characters')  # print the number of characters
 sum = 0
 total_count = 0
 
-info = json.loads(x)
+info = json.loads(hnd)
 js_object = info['comments']
 
 
